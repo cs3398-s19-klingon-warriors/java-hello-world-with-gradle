@@ -19,40 +19,6 @@ public class TestGreeter {
 
 
    private Greeter g;
-
-
-   @Test
-   public void newtestRKGreeterPass() 
-
-   {
-
-
-      g.setName("Great Name");
-
-      assertEquals(g.getName(),"Great Name");
-
-      assertEquals(g.sayHello(),"Hello + Great Name!");
-
-      g.setName("A Better Name");
-
-      assertEquals(g.sayHello(),"Hello + A Better Name!");
-
-
-
-   }
-
-/*
-   @Test
-   public void newtestRKGreeterFail() 
-
-   {
-
-      assertEquals(g.getName(),"fake name");
-
-      assertEquals(g.sayHello(),"Goodbye!");
-
-   }
-*/
 	
 
    @Before
@@ -94,5 +60,40 @@ public class TestGreeter {
       assertEquals(g.sayHello(),"Hello World!");
 
    }
+
+   
+   @Test
+   public void newtestRKGreeterPass() 
+
+   {
+
+
+      g.setName("Great Name");
+
+      assertEquals(g.getName(),"Great Name");
+
+      assertEquals(g.sayHello(),"Hello Great Name!");
+
+      g.setName("A Better Name");
+
+      assertEquals(g.sayHello(),"Hello A Better Name!");
+
+
+
+   }
+
+/*
+   @Test
+   public void newtestRKGreeterFail() 
+
+   {
+
+      assertEquals(g.getName(),"fake name");
+
+      assertEquals(g.sayHello(),"Goodbye!");
+
+   }
+*/
+
 
 }
