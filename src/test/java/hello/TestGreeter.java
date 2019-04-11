@@ -82,7 +82,7 @@ public class TestGreeter {
 
    }
 
-
+/*
    @Test
    public void newtestRKGreeterFail() 
 
@@ -93,7 +93,7 @@ public class TestGreeter {
       assertEquals(g.sayHello(),"Goodbye!");
 
    }
-
+*/
 
 
 }

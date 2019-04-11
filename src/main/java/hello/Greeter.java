@@ -8,6 +8,12 @@ public class Greeter {
 
   private String name = "";
 
+  // new from RK
+  public boolean haveName()
+  {
+	return (name != "") ;
+  }
+
 
 
   public String getName() 
