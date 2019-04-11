@@ -20,6 +20,18 @@ public class TestGreeter {
 
    private Greeter g;
 
+
+   @Test
+   public void newtestRKGreeterPass() 
+
+   {
+
+      assertEquals(g.getName(),"");
+
+      assertEquals(g.sayHello(),"Hello!");
+
+   }
+
 	
 
    @Before
