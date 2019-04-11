@@ -82,6 +82,8 @@ public class TestGreeter {
 
    }
 
+   // Failing test
+   // Commented out to test another new Pass, below
 /*
    @Test
    public void newtestRKGreeterFail() 
@@ -94,6 +96,20 @@ public class TestGreeter {
 
    }
 */
+
+	   @Test
+   public void newtestRKGreeterPassBool() 
+
+   {
+	assertFalse(g.haveName());
+
+
+	g.setName("Now I have a name");
+
+
+	assertTrue(g.haveName());
+
+   }
 
 
 }
