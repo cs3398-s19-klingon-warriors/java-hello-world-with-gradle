@@ -88,13 +88,13 @@ public class TestGreeter {
       assertEquals(g.getName(),"");
       assertEquals(g.sayHello(),"Hello Rickyyy");
    }
-   // Assignment 16 - Part 5a
-   @Test
-   public void newtest_SG_GreeterFail()
-   {
-      g.setName("Morty");
-      assertEquals(g.getName(),"(not) Morty");
-      assertEquals(g.sayHello(),"Hello (not) Morty!");
-   }
+   // // Assignment 16 - Part 5a
+   // @Test
+   // public void newtest_SG_GreeterFail()
+   // {
+   //    g.setName("Morty");
+   //    assertEquals(g.getName(),"(not) Morty");
+   //    assertEquals(g.sayHello(),"Hello (not) Morty!");
+   // }
 
 }
