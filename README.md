@@ -1,5 +1,5 @@
 test
-[![Build Status](https://travis-ci.com/cs3398-s19-klingon-warriors/java-hello-world-with-test.svg?branch=master)](https://travis-ci.com/cs3398-s19-klingon-warriors/java-hello-world-with-test)
+[![Build Status](https://travis-ci.com/cs3398-s19-klingon-warriors/java-hello-world-with-gradle.svg?branch=master)
 # Building Java Projects with Gradle
 
 ##### This guide walks you through using Gradle to build a simple Java project.
