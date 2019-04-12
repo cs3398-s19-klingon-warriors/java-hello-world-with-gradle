@@ -35,4 +35,10 @@ public class TestGreeter {
        assertEquals(g.getName(), "Inigo Montoya");
        assertEquals(g.sayHello(), "Hello Inigo Montoya!");
    }
+   @Test
+   public void KittyCattySGGreeterFail(){
+      g.setName("Catty Corner");
+      assertEquals(g.getName(), "Catty Corner");
+      assertEquals(g.sayHello(), "Hello Kitty Whompus!");
+   }
 }
