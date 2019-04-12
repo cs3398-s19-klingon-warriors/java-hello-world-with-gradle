@@ -29,7 +29,6 @@ public class TestGreeter {
    {
 
       g = new Greeter();
-	System.out.println("Hola");
 
    }
 
@@ -60,6 +59,20 @@ public class TestGreeter {
       assertEquals(g.getName(),"World");
 
       assertEquals(g.sayHello(),"Hello World!");
+
+   }
+
+   @Test
+
+   public void newtestASGreeterPass() {
+       
+       g.setName("Caesar");
+       
+       assertNotEquals(g.getName(), "Brute");
+       
+   }
+    
+   public void newtestASGreeterFail() {
 
    }
 
