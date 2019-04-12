@@ -45,11 +45,23 @@ public class TestGreeter {
 
    }
 
-   @Test
+	@Test
 
-   public void testGreeterEmpty() 
+  	public void newtestTSGreeterFail()
 
    {
+
+   		assertEquals(g.getName(),"");
+
+   		assertNull(g.sayHello());
+
+   	}
+
+   	@Test
+
+  	public void testGreeterEmpty() 
+
+ 	{
 
       assertEquals(g.getName(),"");
 
