@@ -29,6 +29,7 @@ public class TestGreeter {
    {
 
       g = new Greeter();
+	System.out.println("Hola");
 
    }
 
