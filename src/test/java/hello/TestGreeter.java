@@ -32,7 +32,18 @@ public class TestGreeter {
 
    }
 
+   @Test
 
+  public void newtestTSGreeterPass()
+
+   {
+   		g.setName("*Robot beeping* 011101110001011010");
+
+   		assertEquals(g.getName(),"*Robot beeping* 011101110001011010");
+
+   		assertEquals(g.sayHello(),"Hello *Robot beeping* 011101110001011010!");
+
+   }
 
    @Test
 
@@ -43,6 +54,7 @@ public class TestGreeter {
       assertEquals(g.getName(),"");
 
       assertEquals(g.sayHello(),"Hello!");
+
 
    }
 
