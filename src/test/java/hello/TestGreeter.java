@@ -72,14 +72,14 @@ public class TestGreeter {
        
    }
     
-   @Test
-    
-   public void newtestASGreeterFail() {
-       
-       g.setName("Scooby");
-       
-       assertEquals(g.getName(), "Doo");
-       
-   }
+//   @Test
+//    
+//   public void newtestASGreeterFail() {
+//       
+//       g.setName("Scooby");
+//       
+//       assertEquals(g.getName(), "Doo");
+//       
+//   }
 
 }
