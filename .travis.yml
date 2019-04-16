@@ -1,10 +1,12 @@
 language: java
 
-deploy:  
-	provider: releases  
-	api_key:     	
-		secure: $GITHUB_OAUTH_TOKEN  
-	file_glob: true  
-	file: build/**/*  
-	skip_cleanup: true  
-	on:    tags: true
+deploy:
+    provider: releases  
+    api_key:     	
+        secure: $GITHUB_OAUTH_TOKEN  
+    file_glob: true  
+    file: build/**/*  
+    skip_cleanup: true  
+    on:
+       tags: true
+
