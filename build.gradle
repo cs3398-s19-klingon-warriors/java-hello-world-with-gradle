@@ -38,6 +38,7 @@ dependencies {
 // the following is a work around to fix the warning:
 //          warning: unknown enum constant Status.STABLE
     testCompileOnly "org.apiguardian:apiguardian-api:1.0.0"
+testCompile "junit:junit:4.12" // added by RK
 }
 // end::dependencies[]
 
@@ -85,8 +86,11 @@ distSetup.dependsOn(build)
 
 dist.dependsOn(zipDist)
 dist.dependsOn(zipTest)
+
+
 // tag::wrapper[]
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.9'
+wrapper{
+    gradleVersion = '5.2.1'
 }
 // end::wrapper[]
+
