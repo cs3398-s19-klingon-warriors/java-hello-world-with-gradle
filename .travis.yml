@@ -19,7 +19,7 @@ before_deploy:
   - git config --global user.name "Travis CI"
   - export GIT_TAG=$talon-dev.$TRAVIS_BUILD_NUMBER
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $47"
-  - git push -q https://$GITPERM@github.com/drlehr/java-hello-world-with-gradle  --tags
+  - git push -q https://$GITPERM@github.com/cs3398-s19-klingon-warriors/java-hello-world-with-gradle  --tags
   - ls -R
   
 deploy:
