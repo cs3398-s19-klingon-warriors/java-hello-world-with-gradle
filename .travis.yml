@@ -19,14 +19,13 @@ before_deploy:
   - git config --global user.name "Travis CI"
   - export GIT_TAG=$TRAVIS_BRANCH.$TRAVIS_BUILD_NUMBER
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
-  - git push -q https://$GITPERM@github.com/drlehr/java-hello-world-with-gradle  --tags
-  - ls -R
-  
+  - git push -q https://$GITPERM_RK@github.com/cs3398-s19-klingon-warriors/java-hello-world-with-gradle  --tags
+  - ls -R  
 deploy:
   skip_cleanup: true
   provider: releases
   api_key: 
-    secure: $GITPERM
+    secure: $GITPERM_RK
     
   file:
   - "README.md"
@@ -36,4 +35,3 @@ deploy:
   on:
     tags: false
     all_branches: true
-
