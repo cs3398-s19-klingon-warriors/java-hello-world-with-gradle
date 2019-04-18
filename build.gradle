@@ -26,7 +26,8 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 dependencies {
     compile "joda-time:joda-time:2.2"
-    testCompile "org.junit.jupiter:junit-jupiter-api:5.0.1"
+    testCompile "junit:junit:4.12"
+    //testCompile "org.junit.jupiter:junit-jupiter-api:5.0.1"
 // the following is a work around to fix the warning:
 //          warning: unknown enum constant Status.STABLE
     testCompileOnly "org.apiguardian:apiguardian-api:1.0.0"
@@ -71,7 +72,7 @@ distSetup.dependsOn(build)
 dist.dependsOn(zipDist)
 dist.dependsOn(zipTest)
 // tag::wrapper[]
-wrapper(type: Wrapper) {
+wrapper{
     gradleVersion = '4.9'
 }
 // end::wrapper[]
