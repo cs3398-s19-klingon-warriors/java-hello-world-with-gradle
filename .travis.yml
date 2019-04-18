@@ -21,7 +21,8 @@ before_deploy:
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build 
 $TRAVIS_BUILD_NUMBER"
   - git push -q 
-https://$GITPERM@github.com/drlehr/java-hello-world-with-gradle  --tags
+https://$GITPERM_ABEL@github.com/drlehr/java-hello-world-with-gradle  
+--tags
   - ls -R
   
 deploy:
