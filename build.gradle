@@ -34,7 +34,7 @@ targetCompatibility = 1.8
 
 dependencies {
     compile "joda-time:joda-time:2.2"
-    testCompile "org.junit.jupiter:junit-jupiter-api:5.0.1"
+//    testCompile "org.junit.jupiter:junit-jupiter-api:5.0.1" // rk comment out
 // the following is a work around to fix the warning:
 //          warning: unknown enum constant Status.STABLE
     testCompileOnly "org.apiguardian:apiguardian-api:1.0.0"
