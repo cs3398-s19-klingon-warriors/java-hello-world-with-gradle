@@ -6,7 +6,7 @@ script:
 deploy:
   provider: releases
   api_key: 
-    secure: $GITPERM
+    secure: $GITPERM_ABEL
   file_glob: true
   file: build/**/*
   skip_cleanup: true
