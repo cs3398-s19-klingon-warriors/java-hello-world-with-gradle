@@ -31,11 +31,11 @@ deploy:
   api_key: 
     secure: $GITPERM_ABEL
     
-  file:
+file:
   - "README.md"
   - "build.gradle"
   - ".travis.yml"
   
-  on:
+on:
     tags: false
     all_branches: true
