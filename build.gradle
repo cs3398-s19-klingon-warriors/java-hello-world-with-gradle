@@ -30,6 +30,7 @@ dependencies {
 // the following is a work around to fix the warning:
 //          warning: unknown enum constant Status.STABLE
     testCompileOnly "org.apiguardian:apiguardian-api:1.0.0"
+    testCompile "junit:junit:4.12"
 }
 // end::dependencies[]
 task dist {
