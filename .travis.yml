@@ -23,9 +23,8 @@ before_deploy:
   - ls -R
   
 deploy:
-  branches:
-    only:
-      - talon-dev
+  on:
+    branch: talon-dev
   skip_cleanup: true
   provider: releases
   api_key: 
