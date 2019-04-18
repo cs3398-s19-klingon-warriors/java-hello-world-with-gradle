@@ -23,6 +23,7 @@ before_deploy:
   - ls -R
   
 deploy:
+  all_branches: true
   skip_cleanup: true
   provider: releases
   api_key: 
