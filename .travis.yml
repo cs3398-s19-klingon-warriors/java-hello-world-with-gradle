@@ -35,13 +35,13 @@ after_failure:
     - "README.md"
     - "build.gradle"
     - ".travis.yml"
-
+    - "youfailed.md"
 after_succes:
   file:
     - "README.md"
     - "build.gradle"
     - ".travis.yml"
-  
+    = "yousucceeded.md"
 on:
   tags: false
 
