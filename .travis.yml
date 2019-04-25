@@ -37,4 +37,4 @@ file:
   
 on:
   tags: false
-  all_branches: true
+
