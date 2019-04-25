@@ -10,6 +10,8 @@ install: true
 script:
   - gradle clean build
   - gradle dist --rerun-tasks
+  - tar -zcf hello_world_test_reports.tar.gz build/reports
+  - tar -zcf hello_world_executable_distributions.tar.gz build/distributions
 # - gradle distSetup --rerun-tasks
 # - gradle zipDist --rerun-tasks
 # - gradle zipTest --rerun-tasks
