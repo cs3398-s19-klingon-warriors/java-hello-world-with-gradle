@@ -91,9 +91,4 @@ dist.dependsOn(zipDist)
 dist.dependsOn(zipTest)
 
 
-// tag::wrapper[]
-wrapper{
-    gradleVersion = '5.2.1'
-}
-// end::wrapper[]
 
