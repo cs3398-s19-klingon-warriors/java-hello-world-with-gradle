@@ -36,7 +36,7 @@ dependencies {
     compile "joda-time:joda-time:2.2"
     testCompile('org.junit.jupiter:junit-jupiter-api:5.3.1')
     testCompile('org.junit.jupiter:junit-jupiter-params:5.3.1')
-    testCompile('org.junit.jupiter:junit-jupiter-engine:5.3.1')
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.3.1')
 // the following is a work around to fix the warning:
 //          warning: unknown enum constant Status.STABLE
   //  testCompileOnly "org.apiguardian:apiguardian-api:1.0.0"
