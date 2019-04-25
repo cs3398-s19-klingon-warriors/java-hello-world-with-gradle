@@ -29,11 +29,18 @@ deploy:
   provider: releases
   api_key: 
     secure: $GITPERM_ABEL
-    
-file:
-  - "README.md"
-  - "build.gradle"
-  - ".travis.yml"
+
+after_failure:    
+  file:
+    - "README.md"
+    - "build.gradle"
+    - ".travis.yml"
+
+after_succes:
+  file:
+    - "README.md"
+    - "build.gradle"
+    - ".travis.yml"
   
 on:
   tags: false
