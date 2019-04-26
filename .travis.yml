@@ -31,6 +31,4 @@ deploy:
   
   on:
     tags: false
-    branches:
-      only:
-        - r-kelmenson
+    all_branches: true
