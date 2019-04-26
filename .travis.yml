@@ -1,21 +1,11 @@
 dist: xenial
 
 language: java
-# the following will skip the installation of dependencies.
-
-
-# the following forces the use of JDK 8
-# matrix:
-#  include:
-# - jdk: oraclejdk8
   
 script:
   - gradle clean build
   - tar -zcf hello_world_test_reports.tar.gz build/reports
   - tar -zcf hello_world_executable_distributions.tar.gz build/distributions
-# - gradle distSetup --rerun-tasks
-# - gradle zipDist --rerun-tasks
-# - gradle zipTest --rerun-tasks
   - ls -R
 
 before_deploy:
