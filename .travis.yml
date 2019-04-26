@@ -1,1 +1,34 @@
+# docs: https://docs.travis-ci.com/user/deployment/
+dist: xenial
 language: java
+install: true
+
+script: 
+  - gradle clean build
+  - gradle dist --rerun-tasks
+  # - tar -zcf hello_world_test_reports.tar.gz build/reports
+  # - tar -zcf hello_world_executable_distributions.tar.gz build/distributions
+  # - ls -R
+
+before_deploy:
+  - git config --global user.email "builds@travis-ci.com"
+  - git config --global user.name "Travis CI"
+  - export GIT_TAG=$TRAVIS_BRANCH.$TRAVIS_BUILD_NUMBER
+  - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
+  - git push -q https://$GITPERM@github.com/cs3398-klingon-warriors/java-hello-world-with-gradle --tags
+  - ls -R
+  
+deploy:
+  provider: releases
+  skip_cleanup: true
+  file_glob: true
+  api_key:
+    secure: $GITPERM
+  file: 
+    - "README.md"
+    - "build.gradle"
+    - ".travis.yml"
+  on:
+    tags: false
+    all_branches: true 
+  
