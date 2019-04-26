@@ -15,20 +15,18 @@ apply plugin: 'application'
 
 mainClassName = 'hello.HelloWorld'
 
-// tag::repositories[]
+
 repositories {
     mavenCentral()
 }
-// end::repositories[]
 
-// tag::jar[]
+
+
 jar {
     baseName = 'jb-hello-world'
     version =  '0.1.0'
 }
-// end::jar[]
 
-// tag::dependencies[]
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -39,11 +37,18 @@ dependencies {
     testRuntime('org.junit.jupiter:junit-jupiter-engine:5.3.1')
 // the following is a work around to fix the warning:
 //          warning: unknown enum constant Status.STABLE
-  //  testCompileOnly "org.apiguardian:apiguardian-api:1.0.0"
-// testCompile "junit:junit:4.12" // added by RK
     testCompile "org.apiguardian:apiguardian-api:1.0.0"
 }
-// end::dependencies[]
+
+// ****** Comment this out on the remote repository so that Travis CI will build ****** 
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
 
 
 task dist {
@@ -64,7 +69,7 @@ task distSetup {
 }
 
 task zipDist(type: Zip, dependsOn: distSetup) {
-    from "${projectDir}/dist/main"
+    from "${projectDir}/dist/executables"
     from "${projectDir}/Readme.md"
     destinationDir = file("${projectDir}/dist")
     version = "${version}"
@@ -75,7 +80,7 @@ task zipDist(type: Zip, dependsOn: distSetup) {
 }
 
 task zipTest(type: Zip, dependsOn: distSetup) {
-    from "${projectDir}/dist/test"
+    from "${projectDir}/dist/test_reports"
     from "${projectDir}/Readme.md"
     destinationDir = file("${projectDir}/dist")
     version = "${version}"
