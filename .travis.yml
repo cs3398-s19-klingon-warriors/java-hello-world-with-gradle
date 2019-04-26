@@ -27,7 +27,7 @@ deploy:
   - "hello_world_test_reports.tar.gz"
   - "hello_world_executable_distributions.tar.gz"
   
-  skip cleanup: true
+  skip_cleanup: true
   
   on:
     tags: false
