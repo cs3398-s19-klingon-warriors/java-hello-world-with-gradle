@@ -15,18 +15,8 @@ public class TestGreeter {
 
 
 
-   private Greeter g;
+   private Greeter g = new Greeter() ;
 	
-
-   @BeforeAll
-   public void setUp() throws Exception 
-
-   {
-
-      g = new Greeter();
-
-   }
-
 
 
    @Test
