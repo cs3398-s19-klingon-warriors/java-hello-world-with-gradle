@@ -18,7 +18,6 @@ public class TestGreeter {
    private Greeter g;
 	
 
-   @Before
 
    public void setUp() throws Exception 
 
