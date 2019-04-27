@@ -2,13 +2,10 @@ package hello;
 
 
 
-import static org.junit.Assert.*;
-
-
-
-import org.junit.Before;
-
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.* ;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 
 
@@ -18,34 +15,11 @@ public class TestGreeter {
 
 
 
-   private Greeter g;
+   private Greeter g = new Greeter();
 
-	
-
-   @Before
-
-   public void setUp() throws Exception 
-
-   {
-
-      g = new Greeter();
-
-   }
+   
 
    @Test
-
-  public void newtestTSGreeterPass()
-
-   {
-   		g.setName("*Robot beeping* 011101110001011010");
-
-   		assertEquals(g.getName(),"*Robot beeping* 011101110001011010");
-
-   		assertEquals(g.sayHello(),"Hello *Robot beeping* 011101110001011010!");
-
-   }
-
-   	@Test
 
   	public void testGreeterEmpty() 
 
@@ -71,6 +45,19 @@ public class TestGreeter {
       assertEquals(g.getName(),"World");
 
       assertEquals(g.sayHello(),"Hello World!");
+
+   }
+
+   @Test
+
+   public void newtestTSGreeterPass()
+
+   {
+         g.setName("*Robot beeping* 011101110001011010");
+
+         assertEquals(g.getName(),"*Robot beeping* 011101110001011010");
+
+         assertEquals(g.sayHello(),"Hello *Robot beeping* 011101110001011010!");
 
    }
 
